@@ -1,5 +1,3 @@
-
-
 import visidia.simulation.process.algorithm.LC0_Algorithm;
 import visidia.simulation.process.edgestate.MarkedState;
 
