@@ -6,7 +6,8 @@ public class Election_leader extends LC1_Algorithm {
     @Override
    public String getDescription(){
         return "Spanning tree algorithm using LC1. \n" +
-                "Rule: A---N ---> A---A";
+                "Rule1: N --- N (only 1 neighbor) --> F --- N \n"+
+                "Rule2: N --- F (no neighbor) --> E --- F";
     }
 
     @Override

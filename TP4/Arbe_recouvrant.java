@@ -6,7 +6,7 @@ public class Arbe_recouvrant extends LC1_Algorithm {
     @Override
    public String getDescription(){
         return "Spanning tree algorithm using LC1. \n" +
-                "Rule: A---N ---> A---A";
+                "Rule: N --- A --> A x---x A";
     }
 
     @Override
