@@ -1,12 +1,13 @@
-import visidia.simulation.process.algorithm.LC1_Algorithm;
+import visidia.simulation.process.algorithm.LC2_Algorithm;
 import visidia.simulation.process.edgestate.MarkedState;
-// STILL NOT FUCKING WORKING 
-public class TP5_Election_Leader extends LC1_Algorithm {
+
+public class TP5_Election_Leader extends LC2_Algorithm {
 
     @Override
    public String getDescription(){
         return "Spanning tree algorithm using LC2. \n" +
-                "";
+                "Rule1: N --- N (only 1 neighbor) --> F --- N \n"+
+                "Rule2: N --- F (no neighbor) --> E --- F";
     }
 
     @Override
@@ -21,6 +22,14 @@ public class TP5_Election_Leader extends LC1_Algorithm {
         boolean hasNeighbor = checkNeighbors();
         if(!hasNeighbor){
             setLocalProperty("label","E");
+        }
+        int nbNeighbors = 0;
+        for(int j = 0; j<getActiveDoors().size(); j++){
+            int numPort = getActiveDoors().get(j);
+            if(getNeighborProperty(numPort, "label").equals("N")){
+                nbNeighbors++;
+            }
+            setLocalProperty("nbNeighbors",nbNeighbors);
         }
        }
     }

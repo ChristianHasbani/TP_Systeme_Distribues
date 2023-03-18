@@ -1,7 +1,8 @@
 import visidia.simulation.process.algorithm.LC0_Algorithm;
 import visidia.simulation.process.edgestate.MarkedState;
+import visidia.simulation.SimulationConstants;
 
-public class Profondeur extends LC0_Algorithm {
+public class Order_du_graphe extends LC0_Algorithm {
 
     private String neighborStates [];
 
@@ -54,10 +55,11 @@ public class Profondeur extends LC0_Algorithm {
                     setLocalProperty("label","F"); //Change the label of the local node
                     setNeighborProperty("label","A"); // Chagne the label of the neighbor node
                     setNeighborProperty("counter", Integer.parseInt(getLocalProperty("counter").toString()) +
-                     Integer.parseInt(getNeighborProperty("counter").toString()));
+                     Integer.parseInt(getNeighborProperty("counter").toString())); // Update the counter 
                 }
             }
         }
+        putProperty("Affichage",getLocalProperty("counter").toString(), SimulationConstants.PropertyStatus.DISPLAYED);
     }
 
     // Function to check if the nodes still has any neighbor nodes with the state "N"
@@ -73,6 +75,6 @@ public class Profondeur extends LC0_Algorithm {
 
     @Override
     public Object clone() {
-        return new Profondeur();
+        return new Order_du_graphe();
     }
 }

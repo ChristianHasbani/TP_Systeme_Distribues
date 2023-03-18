@@ -72,3 +72,5 @@ public class Profondeur extends LC0_Algorithm {
         return new Profondeur();
     }
 }
+
+//"C:\Program Files\Java\jdk1.7.0_80\bin\javac" Profondeur.java -cp ViSiDiA.jar
