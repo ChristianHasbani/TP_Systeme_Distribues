@@ -60,4 +60,4 @@ public class Election_Leader extends LC0_Algorithm {
     }
 }
 
-//"C:\Program Files\Java\jdk1.7.0_80\bin\javac" Profondeur.java -cp ViSiDiA.jar
+//"C:\Program Files\Java\jdk1.7.0_80\bin\javac" Election_Leader.java -cp ViSiDiA.jar
